@@ -14,7 +14,7 @@ def base(request):
     string = request.GET['input']
     print(string)
     string=string.replace(" ","+")
-    base_url = '#base_url'
+    base_url = 'https://chennai.craigslist.org/search/jjj?query='
     complete_url = base_url+string
     print(complete_url)
     http_text=requests.get(complete_url)

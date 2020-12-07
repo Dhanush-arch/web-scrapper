@@ -7,10 +7,10 @@
     <title>Web Scrapper</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body>
+<body style="overflow-x: hidden; margin: 0;padding: 0;min-height: 100vh; display: flex;flex-direction: column;">
         <!-- Nav-bar -->
         <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark shadow">
-            <a class="navbar-brand " href="#">Web Scrapper</a>
+            <a class="navbar-brand " href="/">Web Scrapper</a>
         </nav>
 
         <div class="mt-3 ml-3">
@@ -39,7 +39,12 @@
 
         <!-- scrapped results -->
         <!-- cards -->
-        <div class="row row-cols-1 row-cols-md-3">
+        <div class="row row-cols-1 row-cols-md-3" style="min-height: 9vh;">
+          {% if list_dict == None %}
+          <div class="container">
+            <h2 >This is a Craigslist Website Scrapper...</h2>
+          </div>
+          {% endif %}
           {% for dict in list_dict %}
           <div class="col mb-4">
             <a href="{{dict.link}}">
@@ -61,12 +66,12 @@
         <br>
         <br>
         <br>
-        <nav class="navbar-dark sticky-bottom bg-dark shadow mt-3 ">
+        <nav class="navbar-dark sticky-bottom bg-dark shadow mt-5 " style="">
           <div class="text-white "style="font-size:0.8em;">
             <br>
             <h4 class="text-center" style="opacity: 0.6;">Web Scrapper</h4>
-            <p class="text-center" style="opacity: 0.5;">This is a Sample Project created by student.</p>
-            <p class="text-center" style="opacity: 0.5;">The creator of this project does not own any copyrights</p>
+            <p class="text-center" style="opacity: 0.5;">This is a Sample Project created by a student.</p>
+            <p class="text-center" style="opacity: 0.5;">The creator of this project does not own any copyrights or responsibility</p>
             <p class="text-center" style="opacity: 0.5;">to the contents displayed in this webpage.</p>
             <p class="text-center" style="opacity: 0.5;">The Languages and The Frameworks used are the following</p>
             <p class="text-center" style="opacity: 0.5;">
